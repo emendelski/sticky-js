@@ -14,9 +14,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  * @repo https://github.com/rgalus/sticky-js
  * @license https://github.com/rgalus/sticky-js/blob/master/LICENSE
  */
-var Sticky =
-/*#__PURE__*/
-function () {
+var Sticky = /*#__PURE__*/function () {
   /**
    * Sticky instance constructor
    * @constructor
@@ -397,8 +395,13 @@ function () {
         top: '',
         left: ''
       });
-      var width = Math.max(element.offsetWidth, element.clientWidth, element.scrollWidth);
-      var height = Math.max(element.offsetHeight, element.clientHeight, element.scrollHeight);
+
+      var _element$getBoudingCl = element.getBoudingClientRect(),
+          rWidth = _element$getBoudingCl.width,
+          rHeight = _element$getBoudingCl.height;
+
+      var width = Math.max(element.offsetWidth, element.clientWidth, rWidth);
+      var height = Math.max(element.offsetHeight, element.clientHeight, rHeight);
       var top = 0;
       var left = 0;
 
