@@ -361,10 +361,8 @@ class Sticky {
   getRectangle(element) {
     this.css(element, { position: '', width: '', top: '', left: '' });
 
-    const { width: rWidth, height: rHeight } = element.getBoudingClientRect();
-
-    const width = Math.max(element.offsetWidth, element.clientWidth, rWidth);
-    const height = Math.max(element.offsetHeight, element.clientHeight, rHeight);
+    const width = Math.max(element.offsetWidth, element.clientWidth);
+    const height = Math.max(element.offsetHeight, element.clientHeight);
 
     let top = 0;
     let left = 0;

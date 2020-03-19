@@ -395,13 +395,8 @@ var Sticky = /*#__PURE__*/function () {
         top: '',
         left: ''
       });
-
-      var _element$getBoudingCl = element.getBoudingClientRect(),
-          rWidth = _element$getBoudingCl.width,
-          rHeight = _element$getBoudingCl.height;
-
-      var width = Math.max(element.offsetWidth, element.clientWidth, rWidth);
-      var height = Math.max(element.offsetHeight, element.clientHeight, rHeight);
+      var width = Math.max(element.offsetWidth, element.clientWidth);
+      var height = Math.max(element.offsetHeight, element.clientHeight);
       var top = 0;
       var left = 0;
 
